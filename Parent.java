@@ -7,7 +7,7 @@ public class Parent {
     public String parentDescription ;
     Parent(int d){
         this.number = d;
-    }
+    }//构造器
 }
 class Son1 extends Parent{
     public String son1Description;

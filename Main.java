@@ -45,7 +45,7 @@ public class Main<T extends Comparable> implements GenericInterface<T>, Serializ
         Outer outer = new Outer(99999999);
         //测试匿名内部类
         Outer.getAnonymousInstance().speak2();
-        Outer.oneMethodAnonymousInnerClass();
+        Outer.oneMethodAnonymousInnerClass().speak();
         outer.testAnonymousInnerClass(new Anonymous() {
             @Override
             public void speak1() {
@@ -155,8 +155,8 @@ public class Main<T extends Comparable> implements GenericInterface<T>, Serializ
         if (number > 30){
             out.println(number);
         }
-        else{
-            out.println(number+1);
+        else {
+            out.println(number + 1);
         }
         //数组测试
         int[] a = new int[3];

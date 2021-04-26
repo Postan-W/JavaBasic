@@ -1,3 +1,4 @@
+//函数式接口
 @FunctionalInterface
 public interface FunctionIterface<T> {
     T getDescription(T data);
