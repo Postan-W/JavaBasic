@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.lang.System.*;
 import java.util.regex.Pattern;
-
+import java.sql.*;
 import static java.lang.System.*;
 //可以直接将import static java.lang.System.out;
 public class Main<T extends Comparable> implements GenericInterface<T>, Serializable {
@@ -30,7 +30,14 @@ public class Main<T extends Comparable> implements GenericInterface<T>, Serializ
         this.data = data;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws SQLException {
+
+        //连接MySQL
+        ConnectionToMysql connectionToMysql = new ConnectionToMysql();
+        Connection connection = connectionToMysql.con_to_mysql();
+        Statement statement = connectionToMysql.getStatement(connection);
+        connectionToMysql.select(statement,"select * from basic_information");
+
         //Scanner in = new Scanner(System.in);
        // String welcome = in.nextLine();
        // System.out.println(welcome);
