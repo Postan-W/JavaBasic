@@ -86,8 +86,8 @@ public class Main<T extends Comparable> implements GenericInterface<T>, Serializ
 
         //父类引用子类测试
         Son1 son1 = new Son1("提供给父类");
-        Parent copyOfSon1 = son1;
-        out.println(copyOfSon1.number);
+        Parent copyFromSon1 = son1;
+        out.println(copyFromSon1.number);
 
         //泛型类测试
         Main<String> stringGeneric = new Main<>();
